@@ -138,6 +138,31 @@
         transform: scale(1.03s);
         transition: 0.3s;
     }
+    /* PROGRESS BARS */
+.progress-container {
+  margin: 10px 0;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 20px;
+  width: 100%;
+}
+
+.progress-fill {
+  height: 20px;
+  border-radius: 10px;
+  background-color: #f39c12;
+  transition: width 2s ease-in-out;
+}
 </style>
 </head>
 <body>
@@ -163,15 +188,42 @@
         web Development, my goal is to become
         professional web Developer.</p>
       </div>
-     <!-- ABOUT -->
-      <div class="section" id="about">
-        <h2>my skills</h2>
-        <div class="skills">
-            <div class="skills">HTML</div>
-            <div class="skills">CSS</div>
-            <div class="skills">JAVASCRIPT</div>
-        </div>
-      </div>
+      
+     <!-- skill -->
+<div class="section" id="skills">
+  <h2>My Skills</h2>
+
+  <div class="progress-container">
+    <div class="progress-label">
+      <span>HTML</span>
+      <span>90%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 90%;"></div>
+    </div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-label">
+      <span>CSS</span>
+      <span>75%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 75%;"></div>
+    </div>
+  </div>
+
+  <div class="progress-container">
+    <div class="progress-label">
+      <span>JAVASCRIPT</span>
+      <span>60%</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" style="width: 60%;"></div>
+    </div>
+  </div>
+
+</div>
 
       <!-- CONTACT -->
        <div class="section" id="contact">
