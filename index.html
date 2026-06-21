@@ -40,9 +40,6 @@
     .section {
         animation: fadein 2s ease-in;
     }
-    .SKILLS {
-        animation: fadein 3s ease-in;
-    }
     header h1 {
         font-size: 40px;
     }
@@ -54,7 +51,7 @@
         padding: 30px;
         max-width: 800px;
         margin: 20px auto;
-        background: white
+        background: white;
     }
     .section h2 {
         color: #2c3e50;
@@ -64,12 +61,18 @@
         display: flex;
         gap: 15px;
     }
-    .skills {
+    .skill {
         background-color: #f39c12;
         color: white;
         padding: 10px 20px;
         border-radius: 8px;
         font-size: 16px;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    .skill:hover {
+        background-color: #2c3e50;
+        transform: scale(1.1);
     }
     footer{
         background-color: #2c3e50;
@@ -79,7 +82,7 @@
         margin-top: 30px;
     }
 
-    /* DARK MADE */
+    /* DARK MODE */
     body.dark {
         background-color: #1a1a2e;
         color: white;
@@ -110,20 +113,12 @@
         z-index: 999;
     }
 
-    /* HOVER EFECTS */
-    .skills {
-        transition: 0.3s;
-        cursor: pointer;
-    }
-    .skills :hover {
-        background-color: #2c3e50;
-        transform: scale(1.1);
-    }
+    /* HOVER EFFECTS */
     .section {
         transition: 0.3s;
     }
     .section:hover {
-        box-shadow: 0 5px  20px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 20px rgba(0,0,0,0.1);
         transform: translateY(-3px);
     }
     nav a {
@@ -135,148 +130,190 @@
     }
     button:hover {
         opacity: 0.8;
-        transform: scale(1.03s);
+        transform: scale(1.03);
         transition: 0.3s;
     }
+
     /* PROGRESS BARS */
-.progress-container {
-  margin: 10px 0;
-}
-
-.progress-label {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.progress-bar {
-  background-color: #ddd;
-  border-radius: 10px;
-  height: 20px;
-  width: 100%;
-}
-
-.progress-fill {
-  height: 20px;
-  border-radius: 10px;
-  background-color: #f39c12;
-  transition: width 2s ease-in-out;
-}
+    .progress-container {
+      margin: 10px 0;
+    }
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      height: 20px;
+      width: 100%;
+    }
+    .progress-fill {
+      height: 20px;
+      border-radius: 10px;
+      background-color: #f39c12;
+      transition: width 2s ease-in-out;
+    }
 </style>
 </head>
 <body>
     <button class="dark-btn" onclick="darkMode()">🌜</button>
-   <!-- NAVIGATION BAR -->
-     <nav style="background: #f39c12; padding: 15PX; text-align: center;">
+
+    <!-- NAVIGATION BAR -->
+     <nav style="background: #f39c12; padding: 15px; text-align: center;">
         <a href="#about" style="color: white; margin: 15px;">ABOUT</a>
         <a href="#skills" style="color: white; margin: 15px;">SKILLS</a>
-        <a href="#Contacts" style="color: white; margin: 15px;">CONTACT</a>
+        <a href="#contact" style="color: white; margin: 15px;">CONTACT</a>
      </nav>
 
     <!-- HEADER -->
      <header>
         <h1>ABDIFATAH AHMED ALI</h1>
-        <P>Web Developer| Somalia</P>
+        <p>Web Developer| Somalia</p>
      </header>
+
      <!-- ABOUT -->
       <div class="section" id="about">
-        <h2>about me</h2>
-        <p>my is <strong>ABDIFATAH AHMED ALI</strong>
-        i'm 25 years old i live in kenya.
-        i love technology and i'm learning
-        web Development, my goal is to become
-        professional web Developer.</p>
+        <h2>About Me</h2>
+        <p>My name is <strong>Abdifatah Ahmed Ali.</strong>
+        I'm 25 years old. I live in Somalia.
+        I love technology and I'm learning
+        web development. My goal is to become
+        a professional web developer.</p>
       </div>
-      
-     <!-- skill -->
-<div class="section" id="skills">
-  <h2>My Skills</h2>
 
-  <div class="progress-container">
-    <div class="progress-label">
-      <span>HTML</span>
-      <span>90%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" style="width: 90%;"></div>
-    </div>
-  </div>
+     <!-- SKILLS -->
+      <div class="section" id="skills">
+        <h2>My Skills</h2>
 
-  <div class="progress-container">
-    <div class="progress-label">
-      <span>CSS</span>
-      <span>75%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" style="width: 75%;"></div>
-    </div>
-  </div>
+        <div class="progress-container">
+          <div class="progress-label">
+            <span>HTML</span>
+            <span>90%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 90%;"></div>
+          </div>
+        </div>
 
-  <div class="progress-container">
-    <div class="progress-label">
-      <span>JAVASCRIPT</span>
-      <span>60%</span>
-    </div>
-    <div class="progress-bar">
-      <div class="progress-fill" style="width: 60%;"></div>
-    </div>
-  </div>
+        <div class="progress-container">
+          <div class="progress-label">
+            <span>CSS</span>
+            <span>75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 75%;"></div>
+          </div>
+        </div>
 
-</div>
+        <div class="progress-container">
+          <div class="progress-label">
+            <span>JAVASCRIPT</span>
+            <span>60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
 
       <!-- CONTACT -->
        <div class="section" id="contact">
-        <H2>CONTACT ME</H2>
-        <P>Email: abdifatahali465@gmail.com</P>
+        <h2>Contact Me</h2>
+        <p>Email: abdifatahali465@gmail.com</p>
         <p>Phone: +252619847049</p>
        </div>
 
        <!-- FOOTER -->
         <footer>
-            <P>© 2026 ABDIFATAH AHMED ALI</P>
+            <p>© 2026 ABDIFATAH AHMED ALI</p>
         </footer>
 
-        <!-- CONTACT FROM -->
+        <!-- CONTACT FORM -->
          <div class="section">
-            <h2>SEND MESSAGE</h2>
-            <label>YOUR NAME</label>
-            <input type="TEXT"
-            placeholder="ENTER YOUR NAME"
+            <h2>Send Message</h2>
+            <label>Your Name</label>
+            <input type="text" id="msgName"
+            placeholder="Enter your name"
             style="width: 100%; padding: 10px; margin: 8px 0;
             border: 1px solid #ccc; border-radius: 5px;
             font-size: 16px;">
-            <label>EMAIL</label>
-            <input type="email"
+
+            <label>Email</label>
+            <input type="email" id="msgEmail"
             placeholder="email@example.com"
-            style="width: 100px; padding: 10px; margin: 8px 0;
+            style="width: 100%; padding: 10px; margin: 8px 0;
             border: 1px solid #ccc; border-radius: 5px; 
             font-size: 16px;">
-            <label>ENTER YOUR MESSAGE</label><br>
-            <textarea placeholder="WRITE YOUR MESSAGE HERE..."
-            style="width: 100; padding: 10px; margin: 8PX 0;
-            border: 1px solid #ccc; border-radius: 5PX;
+
+            <label>Your Message</label><br>
+            <textarea id="msgText" placeholder="Write your message here..."
+            style="width: 100%; padding: 10px; margin: 8px 0;
+            border: 1px solid #ccc; border-radius: 5px;
             font-size: 16px; height: 120px;"></textarea>
+
             <button onclick="SENDMESSAGE()"
             style="background: #f39c12; color: white;
             padding: 12px 30px; border: none;
             border-radius: 8px; font-size: 18px;
             cursor: pointer;">
-            SEND MESSAGE
+            Send Message
             </button>   
          </div>
+
+         <!-- DOM TEST -->
+         <div class="section">
+          <h2 id="test">Click here!</h2>
+          <button onclick="Changethename()">Change Text</button>
+         </div>
+
+         <!-- LOCAL STORAGE TEST -->
+         <div class="section">
+           <h2>Save Your Name</h2>
+           <input type="text" id="name" placeholder="Write your name">
+           <button onclick="Hello()">Hello!</button>
+           <button onclick="keydi()">Save Name</button>
+           <button onclick="hel()">Show Saved Name</button>
+           <p id="Result"></p>
+         </div>
+
          <script>
             function SENDMESSAGE() {
-                alert("your message has ben received!Thank you!");
+                alert("Your message has been received! Thank you!");
             }
+
             function darkMode() {
                 document.body.classList.toggle("dark");
-                let btn = document.querySelector(".dark-btn")
+                let btn = document.querySelector(".dark-btn");
                 if (document.body.classList.contains("dark")) {
                     btn.innerHTML = "🔆";
                 } else {
                     btn.innerHTML = "🌜";
                 }
+            }
+
+            function Changethename() {
+                let el = document.getElementById("test");
+                el.innerHTML = "It has been changed! 🎉";
+                el.style.color = "orange";
+            }
+
+            function Hello() {
+                let name = document.getElementById("name").value;
+                document.getElementById("Result").innerHTML = "Hello " + name + "! 👋";
+            }
+
+            function keydi() {
+                let name = document.getElementById("name").value;
+                localStorage.setItem("savedName", name);
+                alert("It has been saved! ✅");
+            }
+
+            function hel() {
+                let savedName = localStorage.getItem("savedName");
+                document.getElementById("Result").innerHTML = "Your saved name is: " + savedName;
             }
          </script>
 </body> 
