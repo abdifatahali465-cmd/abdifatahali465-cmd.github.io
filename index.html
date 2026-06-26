@@ -263,22 +263,6 @@
             </button>   
          </div>
 
-         <!-- DOM TEST -->
-         <div class="section">
-          <h2 id="test">Click here!</h2>
-          <button onclick="Changethename()">Change Text</button>
-         </div>
-
-         <!-- LOCAL STORAGE TEST -->
-         <div class="section">
-           <h2>Save Your Name</h2>
-           <input type="text" id="name" placeholder="Write your name">
-           <button onclick="Hello()">Hello!</button>
-           <button onclick="keydi()">Save Name</button>
-           <button onclick="hel()">Show Saved Name</button>
-           <p id="Result"></p>
-         </div>
-
          <script>
             function SENDMESSAGE() {
                 alert("Your message has been received! Thank you!");
@@ -292,28 +276,6 @@
                 } else {
                     btn.innerHTML = "🌜";
                 }
-            }
-
-            function Changethename() {
-                let el = document.getElementById("test");
-                el.innerHTML = "It has been changed! 🎉";
-                el.style.color = "orange";
-            }
-
-            function Hello() {
-                let name = document.getElementById("name").value;
-                document.getElementById("Result").innerHTML = "Hello " + name + "! 👋";
-            }
-
-            function keydi() {
-                let name = document.getElementById("name").value;
-                localStorage.setItem("savedName", name);
-                alert("It has been saved! ✅");
-            }
-
-            function hel() {
-                let savedName = localStorage.getItem("savedName");
-                document.getElementById("Result").innerHTML = "Your saved name is: " + savedName;
             }
          </script>
 </body> 
